@@ -18,6 +18,7 @@ class MyQueue {
     void push(int val){
         Node* newNode= new Node(val);
         if(head==NULL){
+            //zodi stack khali thake tahole newNode i hobe first node. and newNode i hobe head and newNode e hobe taile.
             head=newNode;
             tail=newNode;
             sz++;
@@ -30,8 +31,9 @@ class MyQueue {
     void pop(){
         // stack zodi khali thake tahole head NULL hobe, ar zokhon NULL er next access korte zabe tokhon error dibe. tahole pop function call korar somoy check korte hobe stack khali kina.
         head=head->next;
+        // zodi stack e ekti matro node tahke tahole head=head->next korle head NULL node cole zabe. stack e ekti matro node thakar karone tail o head ke pont kore chilo. head NULL e cole zawyay tail garbage value point kore ache,, tai tail keo NULL assign kore dite hobe.
         if(head==NULL){
-            tail=NULL;
+            tail=NULL; // tail ke NULL assign kore deya hoyeche.
             sz--;
             return;
         }

@@ -1,9 +1,2 @@
-15
-24
-33
-42
-51
-0
-1
-2
-0
+Invalid
+Stack is empty

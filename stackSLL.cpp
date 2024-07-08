@@ -58,29 +58,46 @@ class MyStack {
     
 };
 int main(){
-     MyStack st;
-     int sz;
-     cin>>sz;
-     // push val to stack
-     while(sz--){
-        int val;
-        cin>> val;
-       st.push(val);
-     }
-    // access top by looping;
-    // int s=5; // 
-    while(!st.empty()){
-        // cout<<st.top()<<endl; // e line pac bar stack er top value return dibe. top access korar por delete kora hocce na. zodi top access korar por pop call kora hoto tahole current top er porer ta top hoto. ar pop korar fole stack ek ek kore emty hoye zeto.
-        // top access korar por pop kora hole while condition e st er emty function use kora za. tar mane zodi stack emty hoye zay tahole loop bondho hoye zabe.
-        cout<<st.top(); // value
-        cout<<st.size()<<endl; // size
-        st.pop(); // pop korate stack khali hoye zabe. stack khali hoye gele loop bondho hobe.
-    }
-    cout<<st.size()<<endl; //0
-    cout<<st.empty()<<endl; //1 mane khali.
+    MyStack st;
     st.push(10);
-    st.push(10);
-    cout<<st.size()<<endl;
-    cout<<st.empty()<<endl;
+    st.push(20);
+    st.pop();
+    st.pop();
+    // cout<<st.top()<<endl; // error dibe. karon stack e kuno value nei.
+    if(!st.empty()) cout<<st.top()<<endl;
+    // stack zodi khali na hoy, tar mane stack e value takle access kora zabe.
+    else cout<<"Invalid"<<endl;
+    // st.pop(); // stack khali howya sotteo pop function call koray windows error dicche na. kintu onno os error dibe. tahole stack khali hole pop kora zabe na.
+    if(!st.empty()) st.pop();
+    else cout<<"Stack is empty"<<endl;
+    // stack theke kuno value pop kora ba top access korte hole age check kore nite hobe ze stack khali kina. karon stack khali hole pop ba top thake na.
+    
+
+
+    // take input and access top, then pop by looping
+    //  MyStack st;
+    //  int sz;
+    //  cin>>sz;
+    //  // push val to stack
+    //  while(sz--){
+    //     int val;
+    //     cin>> val;
+    //    st.push(val);
+    //  }
+    // // access top by looping;
+    // // int s=5; // 
+    // while(!st.empty()){
+    //     // cout<<st.top()<<endl; // e line pac bar stack er top value return dibe. top access korar por delete kora hocce na. zodi top access korar por pop call kora hoto tahole current top er porer ta top hoto. ar pop korar fole stack ek ek kore emty hoye zeto.
+    //     // top access korar por pop kora hole while condition e st er emty function use kora za. tar mane zodi stack emty hoye zay tahole loop bondho hoye zabe.
+    //     cout<<st.top(); // value
+    //     cout<<st.size()<<endl; // size
+    //     st.pop(); // pop korate stack khali hoye zabe. stack khali hoye gele loop bondho hobe.
+    // }
+    // cout<<st.size()<<endl; //0
+    // cout<<st.empty()<<endl; //1 mane khali.
+    // st.push(10);
+    // st.push(10);
+    // cout<<st.size()<<endl;
+    // cout<<st.empty()<<endl;
     return 0;
 }

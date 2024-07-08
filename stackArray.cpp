@@ -46,7 +46,22 @@ int main(){
     //  cout<<st.empty()<<endl;
 
     //loop diye kaj kora.
-
-
+    MyStack st;
+     int sz;
+     cin>>sz;
+     // push val to stack
+     while(sz--){
+        int val;
+        cin>> val;
+       st.push(val);
+     }
+    // access top by looping;
+    // int s=5; // 
+    while(!st.empty()){
+        // cout<<st.top()<<endl; // e line pac bar stack er top value return dibe. top access korar por delete kora hocce na. zodi top access korar por pop call kora hoto tahole current top er porer ta top hoto. ar pop korar fole stack ek ek kore emty hoye zeto.
+        // top access korar por pop kora hole while condition e st er emty function use kora za. tar mane zodi stack emty hoye zay tahole loop bondho hoye zabe.
+        cout<<st.top()<<endl;
+        st.pop(); // pop korate stack khali hoye zabe. stack khali hoye gele loop bondho hobe.
+    }
     return 0;
 }

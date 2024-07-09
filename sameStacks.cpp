@@ -16,6 +16,20 @@ int main(){
         cin>>x;
         st2.push(x);
     }
+    //compare two stacks value and size manually;
+    //* size same na hole stacks duita same na....
+    if(st1.size()!=st2.size()) cout<<"NO"<<endl;
+    else{
+        while(!st1.empty() && !st1.empty()){
+            if(st1.top()!=st2.top()){
+                cout<<"NO"<<endl;
+                break;
+            }
+            st1.pop();
+            st2.pop();
+        }
+        cout<<"YES"<<endl;
+    }
     //STL checking
     // if(st1==st2) cout<<"YES"<<endl;
     // else cout<<"NO"<<endl;
